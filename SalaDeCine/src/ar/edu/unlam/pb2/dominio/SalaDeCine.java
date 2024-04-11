@@ -12,8 +12,8 @@ public class SalaDeCine {
 
 	public SalaDeCine(int cantidadDeFilas, int cantidadDeColumnas) {
 		this.cantidadDeFilas = cantidadDeFilas;
-		this.cantidadDeColumnas = cantidadDeColumnas;
-		this.butacasDeCine = new Integer[cantidadDeFilas][cantidadDeColumnas];
+		this.cantidadDeColumnas = cantidadDeColumnas; // son cosas que usare despues
+		this.butacasDeCine = new Integer[this.cantidadDeFilas][this.cantidadDeColumnas];
 		prepararButacas();
 	}
 
@@ -125,6 +125,7 @@ public class SalaDeCine {
 		return butacasDisponibles;
 	}
 
+	//TODO: me falta este solo 
 	public Integer cantidadDeButacasTotalesOcupadas() {
 		Integer butacasOcupadas = 0;
 
