@@ -14,7 +14,7 @@ public class Elipse extends FiguraGeometricaRedonda {
 	}
 
 	@Override
-	public Double calcularAreaFigura() {
+	public Double calcularArea() {
 
 		return Math.PI*radioMenor*radioMayor;
 	}

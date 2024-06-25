@@ -20,6 +20,5 @@ public abstract class FiguraGeometricaRedonda extends Figura {
 		centro.moverEnY(deltaY);
 	}
 
-	protected abstract Double calcularAreaFigura();
 	
 }

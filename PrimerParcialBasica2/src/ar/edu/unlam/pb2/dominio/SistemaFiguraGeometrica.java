@@ -4,14 +4,10 @@ import java.util.*;
 
 public class SistemaFiguraGeometrica {
 
-	private List<FiguraGeometricaCuadrada> figurasCuadradas = new ArrayList<FiguraGeometricaCuadrada>();
-	private List<FiguraGeometricaRedonda> figurasRedondas = new ArrayList<FiguraGeometricaRedonda>();
+	private List<Figura> figuras = new ArrayList<Figura>();
 
-	public Boolean ingresarFigurasCuadrada(FiguraGeometricaCuadrada figura) {
-		return figurasCuadradas.add(figura);
-	}
-	public Boolean ingresarFigurasRedonda(FiguraGeometricaRedonda figura) {
-		return figurasRedondas.add(figura);
+	public Boolean ingresarFigura(Figura figura) {
+		return figuras.add(figura);
 	}
 
 	// calcular el area total de todas las figuras
@@ -20,12 +16,8 @@ public class SistemaFiguraGeometrica {
 
 		Double areaTotal = 0.0;
 
-		for (FiguraGeometricaCuadrada cuadradas : figurasCuadradas) {
-			areaTotal+= cuadradas.calcularArea();
-		}
-
-		for (FiguraGeometricaRedonda redondas : figurasRedondas) {
-			areaTotal+=redondas.calcularAreaFigura();
+		for (Figura figura : figuras) {
+			areaTotal+=figura.calcularArea();
 		}
 		
 		return areaTotal;

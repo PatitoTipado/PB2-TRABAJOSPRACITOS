@@ -34,7 +34,7 @@ public class FigurasGeometricasTest {
 		Circulo figura = new Circulo(inicio, radio);
 
 		Double esperado = Math.PI * 25;
-		assertEquals(esperado, figura.calcularAreaFigura());
+		assertEquals(esperado, figura.calcularArea());
 	}
 
 	@Test
@@ -65,7 +65,7 @@ public class FigurasGeometricasTest {
 		Elipse figura = new Elipse(inicio, radioMayor, radioMenor);
 
 		Double esperado = Math.PI * 20.0;
-		assertEquals(esperado, figura.calcularAreaFigura());
+		assertEquals(esperado, figura.calcularArea());
 	}
 
 	@Test
@@ -164,10 +164,10 @@ public class FigurasGeometricasTest {
 		SistemaFiguraGeometrica sistema = new SistemaFiguraGeometrica();
 
 		for (int i = 0; i <iterar ; i++) {
-			sistema.ingresarFigurasCuadrada(figuraCuadrada);
+			sistema.ingresarFigura(figuraCuadrada);
 		}
 		for (int i = 0; i < iterar; i++) {
-			sistema.ingresarFigurasRedonda(figuraRedonda);
+			sistema.ingresarFigura(figuraRedonda);
 		}
 		
 		Double esperado = 20+ ((Math.PI * 25)*5);
